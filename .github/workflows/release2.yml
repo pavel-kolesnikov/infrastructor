@@ -1,0 +1,38 @@
+name: release new version
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'version.txt'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout current branch
+        uses: actions/checkout@v2
+      - name: read version.txt
+        id: version
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: version.txt
+      - name: create a new tag
+        uses: tvdias/github-tagger@v0.0.2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ steps.version.outputs.content }}
+      - uses: actions/setup-java@v4
+        with:
+          java-version: '8'
+          distribution: 'zulu'
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+      - name: Build with Gradle
+        run: ./gradlew build --no-daemon
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: ${{ steps.version.outputs.content }}
+          prerelease: true
+          draft: true
+          files: infrastructor-cli/build/distributions/*.zip
