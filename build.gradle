@@ -36,7 +36,7 @@ subprojects {
     }
 
     dependencies {
-        implementation 'ch.qos.logback:logback-classic:1.2.13'
+        implementation 'ch.qos.logback:logback-classic:1.5.0'
         implementation 'com.github.mwiede:jsch:0.2.16'
         implementation 'javax.validation:validation-api:2.0.1.Final'
         implementation 'org.apache.bval:bval-jsr:1.1.2'
