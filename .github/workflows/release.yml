@@ -23,7 +23,7 @@ jobs:
           tag: ${{ steps.version.outputs.content }}
       - uses: actions/setup-java@v4
         with:
-          java-version: '11'
+          java-version: '8'
           distribution: 'zulu'
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3

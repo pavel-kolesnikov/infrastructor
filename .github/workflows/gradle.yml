@@ -22,7 +22,7 @@ jobs:
         distribution: zulu
         cache: gradle
     - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@3
+      uses: gradle/actions/setup-gradle@v3
     - name: Build with Gradle Wrapper
       run: ./gradlew clean build --no-daemon
       
@@ -43,4 +43,4 @@ jobs:
     # Generates and submits a dependency graph, enabling Dependabot Alerts for all project dependencies.
     # See: https://github.com/gradle/actions/blob/main/dependency-submission/README.md
     - name: Generate and submit dependency graph
-      uses: gradle/actions/dependency-submission@3
+      uses: gradle/actions/dependency-submission@v3
