@@ -1,4 +1,6 @@
-# ![Infrastructor](/files/infrastructor-logo-light.png) [![Java CI with Gradle](https://github.com/infrastructor/infrastructor/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/infrastructor/infrastructor/actions/workflows/build.yml)
+# ![Infrastructor](/files/infrastructor-logo-light.png) 
+<!--[![Java CI with Gradle](https://github.com/infrastructor/infrastructor/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/infrastructor/infrastructor/actions/workflows/build.yml)-->
+[![Java CI with Gradle](https://github.com/pavel-kolesnikov/infrastructor/actions/workflows/gradle.yml/badge.svg)](https://github.com/pavel-kolesnikov/infrastructor/actions/workflows/gradle.yml)
 
 ### Overview
 Infrastructor is a server provisioning and configuration management tool written in Groovy programming language. It implements Infrastructure as Code paradigm. Here are key features of Infrasructor:
@@ -21,9 +23,6 @@ As an alternative you can download and unpack a ZIP file from the [releases page
  
 ### Documentation
 Building comprehensive documentation can be a long process and it can always be a bit out of date. Please check the [wiki](https://github.com/infrastructor/infrastructor/wiki/Getting-Started) for the currently available tutorials and references.
-You may also find these slides interesting: 
-
-[![Infrastructor](https://svgshare.com/i/FvC.svg)](https://drive.google.com/file/d/16UNLtlF9LhEtXA77cZ0zeiVK5ttMiiQP/view)
 
 ### Examples
 A catalog of examples grows [here](https://github.com/infrastructor/examples) 
